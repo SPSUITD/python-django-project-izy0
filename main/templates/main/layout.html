@@ -1,0 +1,27 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css'%}"></link>
+  </head>
+  <body>
+    <aside>
+      <img src="{% static 'main/img/logogwhite.png' %}" alt="logo">
+      <span class="logo">Izy0</span>
+      <h3>Навигация</h3>
+      <ul>
+        <a  href="{%url 'home'%}"><li><i class="fas fa-home"></i>Главная</li></a>
+        <a href="{%url 'chrome'%}"><li><i class="fab fa-chrome"></i>Хром</li></a>
+        <a href="{%url 'weather'%}"><li><i class="fas fa-thermometer"></i>Погода</li></a>
+        <a href="{%url 'chat'%}"><li><i class="far fa-comment-dots"></i>Написать</li></a>
+      </ul>
+    </aside>
+    <main>
+      {% block content %}
+      {% endblock%}
+    </main>
+  </body>
+</html>
