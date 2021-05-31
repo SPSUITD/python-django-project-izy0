@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{%block title%}Главная страница{% endblock %}
+
+{%block content%}
+  <h1>Главная страница</h1>
+  <div class="features">
+
+    {%for i in message%}
+      <div class="message-array">
+          <p class="name">Пользователь: {{ i.name}}</p>
+          <p>Сообщение:
+            <p>{{ i.message }}</p>
+      </div>
+
+    {%endfor%}
+
+{% endblock %}
